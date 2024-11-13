@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseDetailActivity"
+    android:background="@drawable/back">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/text_expense_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expense Details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Expense Name EditText -->
+    <EditText
+        android:id="@+id/edit_text_expense_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Expense Name"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_expense_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text" />
+
+    <!-- Expense Amount EditText -->
+    <EditText
+        android:id="@+id/edit_text_expense_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Expense Amount"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_expense_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="numberDecimal" />
+
+    <!-- Category RadioGroup -->
+    <RadioGroup
+        android:id="@+id/radio_group_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_expense_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Category RadioButton -->
+        <RadioButton
+            android:id="@+id/radio_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food" />
+
+        <RadioButton
+            android:id="@+id/radio_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transport" />
+
+        <RadioButton
+            android:id="@+id/radio_entertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entertainment" />
+
+        <RadioButton
+            android:id="@+id/radio_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+    </RadioGroup>
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/button_update_expense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Update Expense"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_category" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/button_delete_expense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delete Expense"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintTop_toBottomOf="@+id/button_update_expense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

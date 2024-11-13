@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/back">
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Expense Name" />
+
+    <EditText
+        android:id="@+id/edit_text_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Amount" />
+
+    <!-- RadioGroup for selecting category -->
+    <RadioGroup
+        android:id="@+id/radio_group_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_utilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utilities" />
+
+        <RadioButton
+            android:id="@+id/radio_rent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent" />
+
+        <RadioButton
+            android:id="@+id/radio_office_supplies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Office supplies" />
+
+        <RadioButton
+            android:id="@+id/radio_insurance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insurance" />
+
+        <RadioButton
+            android:id="@+id/radio_legal_fees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Legal fees" />
+
+        <RadioButton
+            android:id="@+id/radio_depreciation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depreciation" />
+
+        <RadioButton
+            android:id="@+id/radio_moving_expenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moving expenses" />
+    </RadioGroup>
+</LinearLayout>
